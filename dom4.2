@@ -1,0 +1,18 @@
+eng_dict = {('banana') : 'банан' , ('apple') : 'яблоко' , ('lemon') : 'лимон' , ('cherry') : 'вишня' ,  ('pineapple') : 'ананас' }
+print(eng_dict)
+text = input("""Интерфейс:
+    1. добавить элемент в словарь
+    2.удалить элемент из словаря
+    3.получить значение по некоторому ключу
+    Вы выбрали:""")
+if text == '1' :
+    eng_dict  [input('англ слово(фрукт):')] = input("перевод:")
+    print(eng_dict)
+elif text == "2" :
+   del eng_dict [input("Что убрать?:")]
+   print(eng_dict)
+elif text == "3" :
+    eng_dict = eng_dict.get(input("введите ключ:"))
+    print(eng_dict)
+else:
+    print("Чувак или у тебя клешни или ты не туда жмякнул.")
