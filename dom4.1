@@ -1,24 +1,26 @@
 print("Топовые сериалы:")
 text = ['Breaking bad' , 'Game of Thrones' , 'Sherlock' , 'The Big Bang Theory']
 print(text)
-text_2 = int(input("""Интерфейс:
-    1.добавить элемент в конец списка
-    2.удаление элемента из списка 
-    3.вывод целиком списка 
-    4.очищение самого списка 
-    5.создание копиии списка
-    Вы выбрали: """))
-if text_2 == 1:
-    text.append(input("Добавить сериал:"))
-    print(text)
-elif text_2 == 2:
-    del text [int(input("какой сериал вы хотите убрать (число от 0 - 3):"))]
-    print(text)
-elif text_2 == 3:
-    print(text)
-elif text_2 == 4:
-    print(text.clear())
-elif text_2 == 5:
-     print(text.copy())
-else:
-    print("Ты сломал систему..:)")
+while True:
+    text_2 = int(input("""Интерфейс:
+        1.добавить элемент в конец списка
+        2.удаление элемента из списка 
+        3.вывод целиком списка 
+        4.очищение самого списка 
+        5.создание копиии списка
+        Вы выбрали: """))
+    if text_2 == 1:
+        text.append(input("Добавить сериал:"))
+        print(text)
+    elif text_2 == 2:
+        del text [int(input("какой сериал вы хотите убрать (число от 0 - 3):"))]
+        print(text)
+    elif text_2 == 3:
+        print(text)
+    elif text_2 == 4:
+        print(text.clear())
+    elif text_2 == 5:
+        print(text.copy())
+    else:
+        print("Ты сломал систему..:)")
+        break
