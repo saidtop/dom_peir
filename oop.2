@@ -1,0 +1,38 @@
+class User():
+	def __init__(self,name,sename,password,number,email):
+		self.name = name
+		self.sename = sename
+		self.password = password
+		self.number = number
+		self.email = email
+	def registr(self):
+		pass
+		
+	def avtoris(self):
+		pass
+
+class Aspirant(User):
+	def __init__(self,name,sename,password,number,email,profession,work_experience,education):
+		super().__init__(name,sename,password,number,email)
+		self.profession = profession
+		self.work_experience = work_experience
+		self.education = education
+	def resum(self):
+		pass
+	def vakansia(self):
+		pass
+class Employer(User):
+	def __init__(self,name,sename,password,number,email,name_company,tip_company):
+		super().__init__(name,sename,password,number,email)
+		self.name_company = name_company
+		self.tip_company = tip_company
+	def nasnacit_resum(self):
+		pass
+	def nasnasit_sobesodov(self):
+		pass
+
+user_1 = User("said","dzhamaludinov",123,321,"qwerty")
+user_1.number = 3312
+print(user_1.number)
+user_2 = Employer("Patrick","mk",7575,21241,"asdfgh","Peri","Information")
+print(user_2.name_company)
