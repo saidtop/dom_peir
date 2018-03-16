@@ -1,0 +1,44 @@
+from random import choice
+class Student:
+	def __init__(self,name,sename,nomer_st,marks,omissions):
+		self.name = name
+		self.sename = sename
+		self.nomer_st = nomer_st
+		self.marks = marks
+		self.omissions = omissions
+	def registr(self):
+		pass
+	def avtoris(self):
+		pass
+
+class Mathematics(Student):
+	def __init__(self,name,sename,nomer_st,marks,omissions,kurs,group):
+		super().__init__(name,sename,nomer_st,marks,omissions)
+		self.kurs = kurs
+		self.group = group
+	def check_raspisanie(self):
+		rasp = ["Математике"   ,"Английскому"  , "Русскому"  ]
+		print("На данным момент идет урок по " + choice(rasp))
+
+
+class Programming(Student):
+	def __init__(self,name,sename,nomer_st,marks,omissions,kurs,group):
+		super().__init__(name,sename,nomer_st,marks,omissions)
+		self.kurs = kurs
+		self.group = group
+	def check_raspisanie(self):
+		rasp = ["Программированию"   ,"Английскому"  , "Русскому"  ]
+		print("На данным момент идет урок по " + choice(rasp))
+
+
+class Physics(Student):
+	def __init__(self,name,sename,nomer_st,marks,omissions,kurs,group):
+		super().__init__(name,sename,nomer_st,marks,omissions)
+		self.kurs = kurs
+		self.group = group
+	def check_raspisanie(self):
+		rasp = ["Физике"   ,"Английскому"  , "Русскому"  ]
+		print("На данным момент идет урок по " + choice(rasp))
+
+Student_1 = Programming("said","dz","124",5,0,3,2)
+Student_1.check_raspisanie()
